@@ -40,7 +40,7 @@ int value = Bijective.Decode("n8i12F", Alphabet.Base62);
 Copyright
 ---------
 
-Copyright Matthew King 2016.
+Copyright Matthew King 2016-2017.
 
 License
 -------

@@ -1,10 +1,4 @@
-[Oo]bj/
-[Bb]in/
-packages/
-artifacts/
 .vs/
-.vscode/
-*.user
-*.suo
-*.cache
-project.lock.json
+bin/
+obj/
+artifacts/
