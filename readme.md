@@ -1,20 +1,14 @@
-Bijection
-=========
-
-Introduction
-------------
+# Bijection
 
 Lightweight bijective encode/decode library for .NET
 
-Installation
-------------
+## Installation
 
 ```
 PM> Install-Package Bijection
 ```
 
-Encoding an integer as a string value
--------------------------------------
+## Encoding an integer as a string value
 
 You can encode an integer as a string value, using an alphabet of your choice:
 
@@ -28,8 +22,7 @@ Optionally, you can also pad the encoded values out to a certain length:
 string encoded = Bijective.Encode(1234, Alphabet.Base62, 10);
 ```
 
-Decoding a string value to an integer
--------------------------------------
+## Decoding a string value to an integer
 
 You can decode a string value to an integer, using an alphabet of your choice:
 
@@ -37,12 +30,10 @@ You can decode a string value to an integer, using an alphabet of your choice:
 int value = Bijective.Decode("n8i12F", Alphabet.Base62);
 ```
 
-Copyright
----------
+## Copyright
 
-Copyright Matthew King 2016-2017.
+Copyright Matthew King 2016-2021.
 
-License
--------
+## License
 
 Bijection is licensed under the [MIT License](https://opensource.org/licenses/MIT). Refer to license.txt for more information.
