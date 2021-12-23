@@ -48,7 +48,7 @@ public static class Bijective
             throw new ArgumentOutOfRangeException(nameof(padding), $"{nameof(padding)} must be greater than or equal to zero");
         }
 
-        StringBuilder sb = new StringBuilder();
+        var sb = new StringBuilder();
 
         if (value == 0)
         {
@@ -58,7 +58,7 @@ public static class Bijective
         while (value > 0)
         {
             sb.Insert(0, alphabet[value % alphabet.Length]);
-            value = value / alphabet.Length;
+            value /= alphabet.Length;
         }
 
         if (padding.HasValue)
@@ -100,13 +100,13 @@ public static class Bijective
             throw new ArgumentException($"{nameof(alphabet)} must not be an empty string", nameof(alphabet));
         }
 
-        int result = 0;
+        var result = 0;
 
         for (int i = 0; i < value.Length; i++)
         {
-            char c = value[value.Length - 1 - i];
-            int index = alphabet.IndexOf(c);
-            result = result + (index * (int)Math.Pow(alphabet.Length, i));
+            var c = value[value.Length - 1 - i];
+            var index = alphabet.IndexOf(c);
+            result += index * (int)Math.Pow(alphabet.Length, i);
         }
 
         return result;
